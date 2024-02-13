@@ -1,2 +1,4 @@
 # terraform-pipeline-github-actions-example
-A example Terraform project with a pipeline using Continuous Integration/Continuous Delivery best practices
+
+## Resume
+A pipeline example for a Terraform project with Continuous Integration/Continuous Delivery best practices
