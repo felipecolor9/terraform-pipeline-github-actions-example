@@ -1,0 +1,10 @@
+# chaves
+aws-key*
+
+# arquivos terraform
+.terraform*
+
+# dados sensíveis em código 
+*.out
+*.tfvars
+*.tfstate*
