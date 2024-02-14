@@ -1,0 +1,26 @@
+# Arquivo para excluir automaticamente a infra gerada e evitar custos na nuvem
+
+name: Terraform Destroy
+on: workflow_dispatch
+
+env: 
+    AWS_ACCESS_KEY_ID: ${{secrets.GITHUB_TOKEN.AWS_ACCESS_KEY_ID}}
+    AWS_SECRET_ACCESS_KEY: ${{secrets.GITHUB_TOKEN.AWS_SECRET_ACCESS_KEY}}
+    TF_VAR_aws_key_pub: ${{secrets.GITHUB_TOKEN.TF_VAR_aws_key_pub}}
+
+jobs: 
+    terraform_plan:
+        name: Workflow - Terraform Destroy 
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Terraform Destroy
+          run: |
+            terraform init
+            terraform destroy -auto-approve
+
+
