@@ -1,4 +1,4 @@
-# Terraform Pipeline - Github Actions
+# Terraform Pipeline - Github Actions  
 
 ## EN-US
 ### About
@@ -9,7 +9,6 @@ A pipeline example for a Terraform project with Continuous Integration/Continuou
 * Added new secret TF_VAR_aws_key_pub to reference a public key to access the EC2 instance
 
 ### Workflows
-
-1. Terraform Validate & Plan
-2. Terraform Apply
-3. Terraform Destroy
+1. Terraform Plan (runs 'terraform init', 'terraform validate' and 'terraform plan'; on commit)
+2. Terraform Apply (With auto approve)
+3. Terraform Destroy (With auto approve)
