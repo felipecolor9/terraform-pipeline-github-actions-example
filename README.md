@@ -10,7 +10,7 @@ Um exemplo de pipeline com práticas de CI/CD em um projeto de Terraform respons
 
 ### Actions Github
 1. Terraform Plan (Inicializa o projeto e valida sua sintaxe, rodando o comando 'terraform init', 'terraform validate' e 'terraform plan'; ao commitar em uma branch local)
-2. Terraform Apply (Cria o recurso na cloud, rodando o comando "terraform apply" com o parâmetro -auto-approve; Ao executar manualmente a action)
+2. Terraform Apply & Destroy (Cria o recurso na cloud, espera 10 segundos e destroi o mesmo; Ao dar push para a 'main')
 3. Terraform Destroy (Destrói o recurso na cloud, rodando o comando "terraform destroy" com o parâmetro -auto-approve; Ao executar manualmente a action)
 
 ## EN-US
@@ -23,5 +23,5 @@ A pipeline example with Continuous Integration/Continuous Delivery practices for
 
 ### Actions
 1. Terraform Plan (runs 'terraform init', 'terraform validate' and 'terraform plan'; on commit)
-2. Terraform Apply (With auto approve)
+2. Terraform Apply & Destroy (With auto approve)
 3. Terraform Destroy (With auto approve)
