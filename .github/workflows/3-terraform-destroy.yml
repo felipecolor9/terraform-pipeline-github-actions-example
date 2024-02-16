@@ -1,5 +1,4 @@
-# Arquivo para excluir automaticamente a infra gerada e evitar custos na nuvem
-
+# Ao acionado manualmente, destroi a infra gerada
 name: Terraform Destroy
 on: workflow_dispatch
 
